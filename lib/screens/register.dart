@@ -48,8 +48,9 @@ class Register extends StatelessWidget {
           child: Column(
             children: [
               Align(
-                alignment: Alignment.topLeft,
+                alignment: Alignment(-1.1, -1.0),
                 child: IconButton(
+                    splashRadius: 20,
                     onPressed: (() {
                       Navigator.pop(context);
                     }),

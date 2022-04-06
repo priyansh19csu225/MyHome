@@ -20,8 +20,9 @@ class Otp extends StatelessWidget {
             child: Column(
               children: [
                 Align(
-                  alignment: Alignment.topLeft,
+                  alignment: Alignment(-1.1, -1.0),
                   child: IconButton(
+                      splashRadius: 20,
                       onPressed: (() {
                         Navigator.pop(context);
                       }),
@@ -33,13 +34,31 @@ class Otp extends StatelessWidget {
                 const SizedBox(
                   height: 140,
                 ),
-                Center(
-                  child: const Text(
-                    'Enter the Otp Code from the phone we just sent you',
-                    style: TextStyle(
-                        color: Colors.white70,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 15),
+                const Text(
+                  'Enter the Otp Code from the phone we just sent you',
+                  style: TextStyle(
+                      color: Colors.white70,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 18),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                TextFormField(
+                  style: const TextStyle(),
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(
+                    isDense: true,
+                    filled: true,
+                    fillColor: Colors.white,
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(3),
+                        borderSide:
+                            const BorderSide(color: Colors.blue, width: 2)),
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(3),
+                        borderSide:
+                            const BorderSide(color: Colors.white, width: 2)),
                   ),
                 ),
                 const SizedBox(
@@ -52,9 +71,6 @@ class Otp extends StatelessWidget {
                     height: 45,
                   ),
                   shape: RoundedRectangleBorder(
-                      // side: const BorderSide(
-                      //   width: 2,
-                      // ),
                       borderRadius: BorderRadius.circular(3)),
                   onPressed: () {
                     //    Navigator.push(
