@@ -9,7 +9,7 @@ Future<bool> _onWillPop(context) async {
         context: context,
         builder: (context) => AlertDialog(
           title: const Text('Are you sure?'),
-          content: const Text('Do you want to exit an App'),
+          content: const Text('Do you want to exit MyHome App'),
           actions: <Widget>[
             TextButton(
               onPressed: () => Navigator.of(context).pop(false),
